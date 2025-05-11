@@ -74,7 +74,21 @@ A classe `Coordinator` executa as seguintes etapas:
 
 ---
 
-### 5.
+### 5. Execução do reducer
+
+Segue o mesmo padrão da do mapper
+
+exemplo de de argument.
+
+```bash
+0 reducer_0_input.json
+```
+
+Os ReducerWorkers são iniciados em seguida. Eles leem os dados de entrada que foram preparados pelo Shuffle.
+
+O ReducerWorker processa os dados, realizando a redução dos valores associados a cada chave (somando, no caso).
+
+Os resultados finais de cada ReducerWorker são armazenados em arquivos de saída (como reducer_0_output.txt).
 
 ### 🔁 Repita o processo para cada MapperWorker:
 
