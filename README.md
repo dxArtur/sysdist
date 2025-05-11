@@ -33,7 +33,31 @@ chunk3.txt
 
 ---
 
-### 3. Execução do Coordenador
+### 3. Execução do MapperWorkers
+(No eclipse)
+
+1. Clique com o botão direito sobre ele → **Run As > Java Application**
+2. Vá no menu **Run > Run Configurations...**
+3. Crie uma nova configuração em **Java Application**
+4. No campo **Arguments**, adicione os parâmetros:
+
+```bash
+<workerId> <caminho/do/chunkX.txt>
+```
+
+**Exemplo:**
+```bash
+0 chunks/chunk0.txt
+```
+
+5. Clique em **Apply** e depois em **Run**
+
+---
+
+### 🔁 Repita o processo para cada MapperWorker:
+
+
+Coordenador
 
 Execute a classe `Coordinator` para iniciar o processo completo de MapReduce:
 
@@ -49,7 +73,7 @@ A classe `Coordinator` executa as seguintes etapas:
    Após os MapperWorkers terminarem, o Coordinator chama a classe a que inicia a fase de shuffle.
 
    Enfileira as tarefas para reducers, com nomes de arquivos como reducer_input_0.json.
-   ##DEIXEI PRE DETERMINADO APENAS 4 REDUCERS PARA FACILITAR OS TESTES, ALTERE PARAR A MESMA QUANTIDADE DE ARQUIVOS PARA EVITAR INCONSISTÊNCIAS.
+   ### DEIXEI PRE DETERMINADO APENAS 4 REDUCERS PARA FACILITAR OS TESTES, ALTERE PARAR A MESMA QUANTIDADE DE ARQUIVOS PARA EVITAR INCONSISTÊNCIAS.
 
    Após todos os reducers finalizarem, junta os arquivos reducer_output_0.txt a reducer_output_4.txt em um único resultado final. 
 
