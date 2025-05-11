@@ -31,7 +31,7 @@ chunk2.txt
 chunk3.txt
 ```
 -------
-### 4. Execução do Coordenador
+### 3. Execução do Coordenador
 
 Execute a classe `Coordinator` para iniciar o processo completo de MapReduce:
 
@@ -52,9 +52,8 @@ A classe `Coordinator` executa as seguintes etapas:
    Após todos os reducers finalizarem, junta os arquivos reducer_output_0.txt a reducer_output_4.txt em um único resultado final. 
 
 ---
----
 
-### 3. Execução do MapperWorkers
+### 4. Execução do MapperWorkers
 (No eclipse)
 
 1. Clique com o botão direito sobre ele → **Run As > Java Application**
@@ -75,9 +74,9 @@ A classe `Coordinator` executa as seguintes etapas:
 
 ---
 
+### 5.
+
 ### 🔁 Repita o processo para cada MapperWorker:
-
-
 
 
 ## ✅ Resultado Final
