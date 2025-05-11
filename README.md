@@ -44,7 +44,14 @@ java coordinator.Coordinator
 A classe `Coordinator` executa as seguintes etapas:
 
 1. ✅ Enfileira os arquivos `chunk*.txt` no Redis como tarefas de mapeamento (`map-tasks`).
-(em progresso)
+   Colocando na fila mapper_queue 10 tarefas, cada uma para processar chunk
+
+   Após os MapperWorkers terminarem, o Coordinator chama a classe a que inicia a fase de shuffle.
+
+   Enfileira as tarefas para reducers, com nomes de arquivos como reducer_input_0.json.
+   ##DEIXEI PRE DETERMINADO APENAS 4 REDUCERS PARA FACILITAR OS TESTES, ALTERE PARAR A MESMA QUANTIDADE DE ARQUIVOS PARA EVITAR INCONSISTÊNCIAS.
+
+   Após todos os reducers finalizarem, junta os arquivos reducer_output_0.txt a reducer_output_4.txt em um único resultado final. 
 
 ---
 
