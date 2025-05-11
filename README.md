@@ -47,7 +47,7 @@ chunk3.txt
 
 **Exemplo:**
 ```bash
-0 chunks/chunk0.txt
+0 caminho/do/chunk0.txt
 ```
 
 5. Clique em **Apply** e depois em **Run**
